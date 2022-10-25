@@ -7,11 +7,11 @@ export default abstract class Archetype {
 
   get name(): string { return this._name; }
   
+  abstract get energyType(): EnergyType;
+
   static createdArchetypeInstances(): number {
     throw new Error('Not implemented');
   }
-  
-  abstract get energyType(): EnergyType;
   
   constructor(
     private _name: string,
